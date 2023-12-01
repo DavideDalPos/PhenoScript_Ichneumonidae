@@ -7,10 +7,9 @@
 snippet-dir: ~/.vscode/extensions/tarasov-lab.phenoscript-0.0.16/snippets
 # ADD the names of the authors and ORCID
 authors:
-  'Giulio Montanaro': https://orcid.org/0000-0003-0836-1364
-  'Sergei Tarasov': https://orcid.org/0000-0001-5237-2330
+  'Davide Dal Pos': https://orcid.org/0000-0002-9122-934X
 # ADD a short title of your project
-project-title: "Testing Phenoscript Language: four species of Grebennikovius (Coleoptera: Scarabaeinae) from the Eastern Arc Mountains"
+project-title: "Testing Phenoscript Language: one sepcies of Ichneumoninae (Hymenoptera: Ichneumonidae: Ichneumoninae)"
 importOntologies:
   - https://raw.githubusercontent.com/sergeitarasov/aism/devel/src/ontology/aism-edit.owl
   - https://raw.githubusercontent.com/sergeitarasov/colao/devel/src/ontology/colao-edit.owl
@@ -24,6 +23,7 @@ importOntologies:
   - http://purl.obolibrary.org/obo/bco.owl
   - http://purl.obolibrary.org/obo/uberon/uberon-base.owl
   - http://purl.obolibrary.org/obo/taxrank.owl
+  - https://github.com/hymao/hao
 namespace:
   default:    http://www.w3.org/2002/07/owl#
   others:
