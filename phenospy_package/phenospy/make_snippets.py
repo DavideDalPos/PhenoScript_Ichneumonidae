@@ -1,4 +1,4 @@
 from phenospy import *
 
-yaml_file = 'Phenoscript\PhenoScript_Ichneumonidae\phenospy_package\phenospy\make_snippets.py'
+yaml_file = 'E:\Phenoscript\PhenoScript_Ichneumonidae\phenospy_package\phenospy\package-data\phs-config.yaml'
 make_vscodeSnips(yaml_file)
