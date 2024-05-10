@@ -14,7 +14,7 @@ OTU = {
     this > aism-pronotum >> pato-convex;
     this > hao-metasoma >> pato-red;
     this !> hao-fore_wing;
-    this !> hao-hind_wing;
+    this !> hao-hind_win;
    
   }
 }
