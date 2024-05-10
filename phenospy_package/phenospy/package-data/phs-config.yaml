@@ -23,7 +23,7 @@ importOntologies:
   - http://purl.obolibrary.org/obo/bco.owl
   - http://purl.obolibrary.org/obo/uberon/uberon-base.owl
   - http://purl.obolibrary.org/obo/taxrank.owl
-  - https://raw.githubusercontent.com/hymao/hao/master/hao.owl
+  - https://raw.githubusercontent.com/hymao/hao/master/hao_base.owl
 namespace:
   default:    http://www.w3.org/2002/07/owl#
   others:
