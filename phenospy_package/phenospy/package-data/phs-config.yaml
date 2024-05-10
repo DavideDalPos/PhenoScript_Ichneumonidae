@@ -4,7 +4,7 @@
 #   Win: `%USERPROFILE%\.vscode\extensions`
 #   Mac:`$HOME/.vscode/extensions`
 #   Linux: `$HOME/.vscode/extensions`
-snippet-dir: C:/Users/davel/.vscode/extensions/tarasov-lab.phenoscript-0.0.20/snippets
+snippet-dir: Users/davel/.vscode/extensions/tarasov-lab.phenoscript-0.0.20/snippets
 # ADD the names of the authors and ORCID
 authors:
   'Davide Dal Pos': https://orcid.org/0000-0002-9122-934X
