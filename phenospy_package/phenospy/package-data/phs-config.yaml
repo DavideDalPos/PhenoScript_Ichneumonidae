@@ -51,4 +51,4 @@ namespace:
     phs:      https://github.com/sergeitarasov/PhenoScript/PHS_
     uberon:   http://purl.obolibrary.org/obo/UBERON_
     taxrank:  http://purl.obolibrary.org/obo/TAXRANK_
-    # obo: http://purl.obolibrary.org/obo/
+    obo:      http://purl.obolibrary.org/obo/
