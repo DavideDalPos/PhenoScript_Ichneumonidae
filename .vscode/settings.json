@@ -1,4 +1,5 @@
 {
     "terminal.integrated.cwd": "${workspaceFolder}",
-    "python.terminal.executeInFileDir": true
+    "python.terminal.executeInFileDir": true,
+    "python.pythonPath": "C:\\Users\\davel\\anaconda3\\python.exe"
 }
