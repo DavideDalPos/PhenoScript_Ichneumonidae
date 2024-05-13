@@ -14,14 +14,14 @@ importOntologies:
   - https://raw.githubusercontent.com/sergeitarasov/aism/devel/src/ontology/aism-edit.owl
   - https://raw.githubusercontent.com/sergeitarasov/colao/devel/src/ontology/colao-edit.owl
   - https://raw.githubusercontent.com/sergeitarasov/PhenoScript/main/phenospy_package/phenospy/package-data/phenoscript.owl
-  - #http://purl.obolibrary.org/obo/pato.owl
+  - http://purl.obolibrary.org/obo/pato.owl
   - http://purl.obolibrary.org/obo/bspo.owl
   - http://purl.obolibrary.org/obo/cdao.owl
   - http://purl.obolibrary.org/obo/iao.owl
   - http://purl.obolibrary.org/obo/ro.owl
   - http://purl.obolibrary.org/obo/uo.owl
   - http://purl.obolibrary.org/obo/bco.owl
-  - #http://purl.obolibrary.org/obo/uberon/uberon-base.owl
+  - http://purl.obolibrary.org/obo/uberon/uberon-base.owl
   - http://purl.obolibrary.org/obo/taxrank.owl
   - https://raw.githubusercontent.com/teleaslamellatus/hao-odk/main/hao-full.owl
   - https://raw.githubusercontent.com/hymao/hao/master/hao.owl

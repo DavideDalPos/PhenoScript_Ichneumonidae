@@ -1,2 +1,0 @@
-- [Home](about.md)
-- [general](general.md)
