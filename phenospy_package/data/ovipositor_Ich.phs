@@ -1,12 +1,12 @@
 OTU = {
   DATA = {
-    uberon-male_organism:id-1[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org Trassedia luapi';
-    uberon-male_organism:id-1 .dwc-Catalog_Number 'XXXXXX';
-    uberon-male_organism:id-1 .iao-denotes cdao-TU .iao-denotes taxrank-species:id-08ba61;
-        
-    taxrank-species:id-08ba61 .dwc-Taxon_ID_TaxonID 'https://www.gbif.org/species/1309196';
-    taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/1309195';
-    taxrank-species:id-08ba61 .rdfs-label 'Trassedia luapi';
+    uberon-female_organism:id-1[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org Glypta';
+    uberon-female_organism:id-1 .dwc-Catalog_Number 'XXXXXX';
+    uberon-female_organism:id-1 .iao-denotes cdao-TU .iao-denotes taxrank-species:id-08ba61; 
+
+    taxrank-species:id-08ba61 .dwc-Taxon_ID_TaxonID 'https://www.gbif.org/species/1273037';
+    taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/3512';
+    taxrank-species:id-08ba61 .rdfs-label 'Glypta';
     
   }
   TRAITS = {
