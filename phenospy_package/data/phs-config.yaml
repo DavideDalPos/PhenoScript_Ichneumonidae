@@ -4,7 +4,7 @@
 #   Win: `%USERPROFILE%\.vscode\extensions`
 #   Mac:`$HOME/.vscode/extensions`
 #   Linux: `$HOME/.vscode/extensions`
-snippet-dir: C:\Users\davel\.vscode\extensions\tarasov-lab.phenoscript-0.0.20\snippets
+snippet-dir: C:\Users\davel\.vscode\snippets_Ichneumonidae\snippets
 # ADD the names of the authors and ORCID
 authors:
   'Davide Dal Pos': https://orcid.org/0000-0002-9122-934X
@@ -24,7 +24,6 @@ importOntologies:
   - http://purl.obolibrary.org/obo/uberon/uberon-base.owl
   - http://purl.obolibrary.org/obo/taxrank.owl
   - https://raw.githubusercontent.com/teleaslamellatus/hao-odk/main/hao-full.owl
-  - https://raw.githubusercontent.com/hymao/hao/master/hao.owl
   
 namespace:
   default:    http://www.w3.org/2002/07/owl#
