@@ -58,7 +58,7 @@ OTU = {
     this !> 
 
   ##"Anterior notch of the dorsal valve position: anterior region of the bulb"
-    second_val > hao-anterior_notch_of_the_dorsal_valve >> pato-position << bspo-anterior_region < hao-bulb;
+     > hao-anterior_notch_of_the_dorsal_valve >> pato-position << bspo-anterior_region < hao-bulb;
 
   ##"Processus articularis position: anterolateral region of the bulb."
     this > hao-processus_articularis >> pato-position << bspo-antero-lateral_region < hao-bulb;
