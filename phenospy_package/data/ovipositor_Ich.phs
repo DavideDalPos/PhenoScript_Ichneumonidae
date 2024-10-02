@@ -24,7 +24,7 @@ OTU = {
     hao-first_valvifer:id-356f11 > hao-posteroventral_corner_of_the_first_valvifer > hao-second_valviferal_condyle_of_the_first_valvifer;  
     
   ##not sure here how to translate this: "Ninth tergal condyle of the first valvifer position: posterodorsal margin of the first valvifer": DA RIVEDERE CON SERGEI!  
-      hao-first_valvifer:id-356f11 > hao-ninth_tergal_condyle_of_the_first_valvifer .bspo-postero-dorsal_margin;
+    hao-first_valvifer:id-356f11 > hao-ninth_tergal_condyle_of_the_first_valvifer .bspo-postero-dorsal_margin;
     
 
   ##check if truly furcula 
@@ -55,10 +55,10 @@ OTU = {
     bspo-ventral_margin:id-a89cc1 .ro-surrounds hao-posterior_second_valvifer-second_valvula_muscle;
 
   ##"Second valvifer shape in dorsal view: No lateral expansion of the posterior section of dorsal flange of second valvifer posterior to intervalviferal articulation". Creates ontology term   
-    this !> 
+    XXXXX
 
   ##"Anterior notch of the dorsal valve position: anterior region of the bulb"
-     > hao-anterior_notch_of_the_dorsal_valve >> pato-position << bspo-anterior_region < hao-bulb;
+     XXXXXXXXX hao-anterior_notch_of_the_dorsal_valve >> pato-position << bspo-anterior_region < hao-bulb;
 
   ##"Processus articularis position: anterolateral region of the bulb."
     this > hao-processus_articularis >> pato-position << bspo-antero-lateral_region < hao-bulb;
