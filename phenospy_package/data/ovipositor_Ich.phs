@@ -45,7 +45,7 @@ OTU = {
     
     hao-second_valvifer:id-db308c > hao-anterior_section_of_dorsal_flange_of_second_valvifer >> pato-blunt;
     hao-second_valvifer:id-db308c > hao-posterior_section_of_dorsal_flange_of_second_valvifer >> pato-sharp;
-
+    
   ##should be allright "Anteroventral margin of the second valvifers median groove: present"
     hao-second_valvifer:id-db308c > bspo-antero-ventral_margin > bspo-medial_region > hao-groove; 
     
@@ -55,7 +55,7 @@ OTU = {
     bspo-ventral_margin:id-a89cc1 .ro-surrounds hao-posterior_second_valvifer-second_valvula_muscle;
 
   ##"Second valvifer shape in dorsal view: No lateral expansion of the posterior section of dorsal flange of second valvifer posterior to intervalviferal articulation". Creates ontology term   
-    XXXXX
+    XXXXX hao
 
   ##"Anterior notch of the dorsal valve position: anterior region of the bulb"
      XXXXXXXXX hao-anterior_notch_of_the_dorsal_valve >> pato-position << bspo-anterior_region < hao-bulb;
