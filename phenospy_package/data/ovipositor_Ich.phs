@@ -39,16 +39,13 @@ OTU = {
 
   ##not sure here how to translate this: "Position of anterior areas of the second valvifer in anterior view: converging ventrally". For this, we would need to create a subclass of the second valvifer (second valvifer right and second valvifer left) 
     hao-second_valvifer:id-db308c > hao-anterior_area_of_the_second_valvifer > bspo-lateral_side > bspo-ventral_region >> pato-oriented_towards << bspo-ventral_region < bspo-lateral_side < hao-anterior_area_of_the_second_valvifer;
-
   ##"Length of dorsal projection of second valvifer in lateral view (L1) vs. length of anterior area of second valvifer in lateral view (L2): L1 less than L2"
     hao-second_valvifer:id-db308c > hao-dorsal_projection_of_the_second_valvifer > bspo-lateral_side >> pato-length << bspo-lateral_sidelateral_side < hao-anterior_area_of_the_second_valvifer;
     
     hao-second_valvifer:id-db308c > hao-anterior_section_of_dorsal_flange_of_second_valvifer >> pato-blunt;
     hao-second_valvifer:id-db308c > hao-posterior_section_of_dorsal_flange_of_second_valvifer >> pato-sharp;
-    
   ##should be allright "Anteroventral margin of the second valvifers median groove: present"
     hao-second_valvifer:id-db308c > bspo-antero-ventral_margin > bspo-medial_region > hao-groove; 
-    
     hao-second_valvifer:id-db308c > bspo-ventral_margin:id-a89cc1 >> pato-straight;
   
   ##"Ventral margin of the second valvifer position: surrounds posterior second valvifer-second valvula muscle"
