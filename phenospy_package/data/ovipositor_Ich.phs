@@ -20,10 +20,8 @@ OTU = {
     hao-first_valvifer:id-356f11 > bspo-dorsal_margin >> pato-convex;
     hao-first_valvifer:id-356f11 > hao-posterior_margin_of_the_first_valvifer >> pato-convex;
     this !> hao-anterior_flange_of_the_first_valvifer < hao-first_valvifer:id-356f11;
-
   ##not sure here how to translate this: "Second valviferal condyle of the first valvifer position: at the posteroventral corner of the first valvifer": DA RIVEDERE CON SERGEI!
     hao-first_valvifer:id-356f11 > hao-posteroventral_corner_of_the_first_valvifer > hao-second_valviferal_condyle_of_the_first_valvifer;  
-    
   ##not sure here how to translate this: "Ninth tergal condyle of the first valvifer position: posterodorsal margin of the first valvifer": DA RIVEDERE CON SERGEI!  
     hao-first_valvifer:id-356f11 > hao-ninth_tergal_condyle_of_the_first_valvifer .bspo-postero-dorsal_margin;
 
