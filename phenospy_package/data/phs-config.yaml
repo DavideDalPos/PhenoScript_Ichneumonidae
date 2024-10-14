@@ -4,7 +4,7 @@
 #   Win: `%USERPROFILE%\.vscode\extensions`
 #   Mac:`$HOME/.vscode/extensions`
 #   Linux: `$HOME/.vscode/extensions`
-snippet-dir: C:\Users\davel\.vscode\extensions\Ichneumonidae\snippets
+snippet-dir: E:\Phenoscript\PhenoScript_Ichneumonidae\phenospy_package\data\Ichneumonidae
 # ADD the names of the authors and ORCID
 authors:
   'Davide Dal Pos': https://orcid.org/0000-0002-9122-934X
