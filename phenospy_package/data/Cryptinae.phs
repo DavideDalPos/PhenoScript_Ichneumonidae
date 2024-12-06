@@ -1,0 +1,233 @@
+OTU = {
+  DATA = {
+    uberon-female_organism:id-1[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org Cryptinae';
+    uberon-female_organism:id-1 .dwc-Catalog_Number 'XXXXXX';
+    uberon-female_organism:id-1 .iao-denotes cdao-TU .iao-denotes taxrank-species:id-08ba61; 
+
+    taxrank-species:id-08ba61 .dwc-Taxon_ID_TaxonID '';
+    taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID '';
+    taxrank-species:id-08ba61 .rdfs-label 'Cryptinae';
+    
+  }
+
+  TRAITS = {
+  # NEED TO DEFINE PATO-LENGTH!!!
+  ##"First valvifer shape in lateral view: Half as wide as long"
+    this > hao-first_valvifer:id-356f11 > bspo-lateral_side:id-47f2cb >> pato-width .iao-is_quality_measured_as iao-measurement_datum:id-bf744b .iao.aism-has_unit pato-length << bspo-lateral_side:id-47f2cb;
+    iao-measurement_datum:id-bf744b .iao-has_measurement_value 0.5;
+  
+  ##Anteroventral margin of first valvifer shape in lateral view: straight.
+    hao-first_valvifer:id-356f11 > bspo-anterior_margin > bspo-ventral_region >> pato-straight;
+
+  ##Dorsal margin of first valvifer in lateral view: convex.
+    hao-first_valvifer:id-356f11 > bspo-dorsal_margin >> pato-convex;
+  
+  ##Posterior margin of first valvifer in lateral view: convex
+    hao-first_valvifer:id-356f11 > hao-posterior_margin_of_the_first_valvifer >> pato-convex;
+  
+  ##Anterior flange of the first valvifer count: absent
+    this !> hao-anterior_flange_of_the_first_valvifer < hao-first_valvifer:id-356f11;
+
+  ##[Second valviferal condyle of the first valvifer position: at the posteroventral corner of the first valvifer": DA RIVEDERE CON SERGEI!]
+    hao-first_valvifer:id-356f11 > hao-posteroventral_corner_of_the_first_valvifer > hao-second_valviferal_condyle_of_the_first_valvifer; 
+
+  ##[Ninth tergal condyle of the first valvifer position: posterodorsal margin of the first valvifer": DA RIVEDERE CON SERGEI!]  
+    hao-first_valvifer:id-356f11 > hao-ninth_tergal_condyle_of_the_first_valvifer .bspo-postero-dorsal_margin;
+
+  ##check if truly furcula 
+    this !> hao-furcula;
+
+  ##Anterior area of the second valvifer height vs. height of posterior area of second valvifer: more than twice as high"
+    this > hao-second_valvifer:id-db308c > bspo-anterior-most_region >> pato-height |>| iao-measurement_datum:id-6a9f06 .iao.aism-has_unit pato-height << bspo-posterior-most_region < hao-second_valvifer:id-db308c; 
+    iao-measurement_datum:id-6a9f06 .iao-has_measurement_value 2;
+  
+  ## Basal line of the second valvifer count: absent
+    this !> hao-basal_line_of_the_second_valvifer < hao-second_valvifer:id-db308c;
+
+  ##Dorsal projection of the second valvifer count: present
+    hao-second_valvifer:id-db308c > hao-dorsal_projection_of_the_second_valvifer;
+
+  ##[Position of anterior areas of the second valvifer in anterior view: converging ventrally". For this, we would need to create a subclass of the second valvifer (second valvifer right and second valvifer left)] 
+    hao-second_valvifer:id-db308c > hao-anterior_area_of_the_second_valvifer > bspo-lateral_side > bspo-ventral_region >> pato-oriented_towards << bspo-ventral_region < bspo-lateral_side < hao-anterior_area_of_the_second_valvifer;
+  
+  ##Length of dorsal projection of second valvifer in lateral view (L1) vs. length of anterior area of second valvifer in lateral view (L2): L1 less than L2
+    hao-second_valvifer:id-db308c > hao-dorsal_projection_of_the_second_valvifer > bspo-lateral_side >> pato-length << bspo-lateral_sidelateral_side < hao-anterior_area_of_the_second_valvifer;
+    
+  ##Anterior section of dorsal flange of the second valvifer sharpness: blunt.
+    hao-second_valvifer:id-db308c > hao-anterior_section_of_dorsal_flange_of_second_valvifer >> pato-blunt;
+  
+  ##Posterior section of dorsal flange of second valvifer sharpness: sharp
+    hao-second_valvifer:id-db308c > hao-posterior_section_of_dorsal_flange_of_second_valvifer >> pato-sharp;
+
+  ##!!Posterior area of second valvifer shape: elongated## Do we need to repear hear second valvifer? 
+    hao-second_valvifer:id-db308c > hao-posterior_area_of_the_second_valvifer >> pato-elongated;
+
+  ##Anteroventral margin of the second valvifers median groove: present
+    hao-second_valvifer:id-db308c > bspo-antero-ventral_margin > bspo-medial_region > hao-groove; 
+
+  ## Ventral margin of the second valvifer curvature: mostly straight.
+    hao-second_valvifer:id-db308c > bspo-ventral_margin:id-a89cc1 >> pato-straight;
+  
+  ##"Ventral margin of the second valvifer position: surrounds posterior second valvifer-second valvula muscle"
+    bspo-ventral_margin:id-a89cc1 .ro-surrounds hao-posterior_second_valvifer-second_valvula_muscle;
+
+  ##[Second valvifer shape in dorsal view: No lateral expansion of the posterior section of dorsal flange of second valvifer posterior to intervalviferal articulation". How to code the lateral expansion]   
+    this !> hao-posterior_section_of_dorsal_flange_of_second_valvifer > bspo-posterior_region:id-bf2122 >> pato-dilated; 
+    bspo-posterior_region:id-bf2122 .ro-adjacent_to hao-intervalvifer_articulation;
+
+  ##Anterior notch of the dorsal valve position: anterior region of the bulb## SOLVED
+   this > hao-anterior_notch_of_the_dorsal_valve  .ro-located_in bspo-anterior_region < hao-bulb:id-29f747;
+
+  ##Processus articularis position: anterolateral region of the bulb.
+   this > hao-processus_articularis:id-00d0b2 .ro-located_in bspo-antero-lateral_region < hao-bulb:id-29f747;
+
+  ##!!Fossa of the second valvifer-second valvulae articulation shape: slight lateral expansion. VEDERED CON ISTVAN
+   this > hao-basal_articulation > hao-fossa > bspo-lateral_region >> pato-dilated; 
+
+  ##Anterior region of dorsal margin of the bulb curvature: curved dorsally in lateral view" SOLVED
+    hao-bulb:id-29f747 > bspo-dorsal_margin > bspo-anterior_region > bspo-lateral_side >> pato-curved;
+
+  ##Processus musculares position: anterodorsal region of the bulb"
+    this > hao-processus_musculares:id-61d989 .ro-located_in bspo-antero-dorsal_region < hao-bulb:id-29f747;
+
+  ##XXXXXXXXXXProcessus musculares size extends anteriorly of processus articulares" ??XXXXXXXXXX REVIEW WITH CT SCANNING
+    hao-processus_musculares:id-61d989 > bspo-anterior_region >> pato-increased_length << hao-processus_articularis:id-00d0b2;
+
+  ##Median region of bulb: sclerotized" Maybe need to create term "sclerotized"? 
+    hao-bulb:id-29f747 > bspo-medial_region >> pato-increased_thickness
+
+  ##!!Median region of second valvulae: strongly sclerotized" Maybe need to create term "sclerotized"? 
+    hao-second_valvula > bspo-medial_region >> pato-increased_thickness
+  
+  ##[Aulaciform rod count: absent" NEED TO ADD AULACIFORM ROD TO HAO]
+    this !> 
+
+  ##Median bridge count: absent
+    this !> hao-median_bridge_of_the_second_valvifers;
+    
+  ##Distal vertical conjunctiva of the second valvifer-third valvula complex count: present
+    this > hao-distal_vertical_conjunctiva_of_the_second_valvifer-third_valvula_complex;
+
+  ##[!!Distal vertical conjunctiva of the second valvifer-third valvula complex overlap relationship with dorsal margin of second valvifer-third valvula complex: NOT CODED]
+    hao-distal_vertical_conjunctiva_of_the_second_valvifer-third_valvula_complex >> XXX << bspo-dorsal_margin < hao-second_valvifer-third_valvula_complex;
+
+  ##Lateral region of the third valvula shape in posterior view: convex
+    this > hao-third_valvula:id-fccca9 > bspo-lateral_region > bspo-posterior_side >> pato-convex;
+    
+  ##!!Lateral region of the third valvula entity: is a sclerite" Create a new term! Needs review! 
+    hao-third_valvula:id-fccca9 > bspo-lateral_region >> pato-increased_thickness;
+
+  ##Medial region of the third valvula shape in posterior view: concave
+    hao-third_valvula:id-fccca9 > bspo-medial_region > bspo-posterior_side >> pato-concave;
+
+  ##[!!Median region of the third valvula entity: is a conjunctiva"] Create a new term! Needs review!  
+    hao-third_valvula:id-fccca9 > bspo-medial_region >> pato-decreased_thickness;
+
+  ##!! Anterior ridge of T9 count: absent
+    this! > hao-anterior_ridge_of_T9;
+
+  ##Cordate apodeme expansion: expanded posteriorly of site of invagination
+    this > hao-cordate_apodeme:id-2b410e > bspo-posterior-most_region:id-c7cf7c >> pato-dilated; 
+    bspo-posterior-most_region:id-c7cf7c .ro-adjacent_to hao-cuticular_invagination < hao-cordate_apodeme:id-2b410e;
+
+  ##!!!Anterior second valvifer muscle: present. Rivedere with ISTVAN
+    this > hao-anterior_second_valvifer; 
+
+  ##Attachment site of S7-first valvula muscle (M1) on S7 position: NOT CODED Check what term to use for attachment site for certain area.
+    this > hao hao-S7-first_valvula_muscle:id-ec3473 > uberon-attachment_site  >> XXX; uberon-attachment_site
+
+  ##Attachment site of S7-first valvula muscle (M1) on first valvula position: not coded
+    hao-S7-first_valvula_muscle:id-ec3473 > uberon-attachment_site .ro-located_in hao-first_valvula > XXX; 
+
+  ##Attachment site of S7-first valvula muscle (M1) on first valvula position: NOT CODED.
+    hao-S7-first_valvula_muscle:id-ec3473 > uberon-attachment_site .ro-located_in hao-first_valvula > XXX;
+
+  ##Attachment site of dorsal T8-T9 (M2) muscle on T8 position: NOT CODED
+    this > hao-dorsal_T8-T9_muscle:id-9e2698 > uberon-attachment_site .ro-located_in hao-T8 > XXX;
+
+  ##Attachment site of dorsal T8-T9 muscle (M2) on T9 position: NOT CODED
+    hao-dorsal_T8-T9_muscle:id-9e2698 > uberon-attachment_site .ro-located_in hao-T9_0002186 > XXX;
+
+  ##Attachment site of lateral T8-T9 muscle (M3) on T8 position: NOT CODED
+   this > hao-lateral_T8-T9_muscle:id-2e112b > uberon-attachment_site .ro-located_in hao-T8 > XXX;
+
+  ##Attachment site of lateral T8-T9 muscle (M3) on T9 position: NOT CODED
+    hao-lateral_T8-T9_muscle:id-2e112b > uberon-attachment_site .ro-located_in hao-T9_0002186 > XXX;
+
+  ##Attachment site of T8-first valvifer muscle (M4) on T8 position: NOT CODED
+   this > hao-T8-first_valvifer_muscle:id-53aef9 > uberon-attachment_site .ro-located_in hao-T8 > XXX;
+
+  ##Attachment site of T8-first valvifer muscle (M4) on first valvifer position: NOT CODED
+    hao-T8-first_valvifer_muscle:id-53aef9 > uberon-attachment_site:id-1d6f9f .ro-located_in hao-first_valvifer > XXX;
+  
+  ## Attachment site of T8-first valvifer muscle (M4) on first valvifer position: NOT CODED
+    hao-T8-first_valvifer_muscle:id-53aef9 > uberon-attachment_site:id-1d6f9f .ro-located_in hao-first_valvifer > XXX;
+  
+  ##Attachment site of dorsal T9-second valvifer muscle (M5) on T9 position: adjacent to the anterior ridge of T9 and 
+    ##the region of T9 dorsal to and ventral to the anterior ridge of T9
+  this > hao-dorsal_T9-second_valvifer_muscle:id-530fad > uberon-attachment_site:id-4480bc .ro-located_in hao-T9_0002186 .ro-adjacent_to hao-anterior_ridge_of_T9;
+
+  ##Attachment site of dorsal T9-second valvifer muscle (M5) on second valvifer position: adjacent to the anterior section of the dorsal flange of the second valvifer
+  hao-dorsal_T9-second_valvifer_muscle:id-530fad > uberon-attachment_site:id-4480bc .ro-located_in hao-second_valvifer .ro-adjacent_to hao-anterior_section_of_dorsal_flange_of_second_valvifer; 
+
+  ##????? Ventral T9-second valvifer muscle (M6) count value: 1 ??????? Put on hold because not clear yet! 
+  this > hao-ventral_T9-second_valvifer_muscle:id-4deb94 >> pato-has_number_of .iao-is_quality_measured_as iao-measurement_datum:id-40dcba;
+  iao-measurement_datum:id-40dcba .iao-is_quality_measured_as 1;
+  
+  ##Attachment site of ventral T9-second valvifer muscle (M6) on second valvifer position: posterior area of the second valvifer
+  hao-ventral_T9-second_valvifer_muscle:id-4deb94 > uberon-attachment_site .ro-located_in hao-second_valvifer >> pato-position << bspo-posterior-most_region < hao-second_valvifer:id-db308c;
+
+  ##Attachment site of ventral T9-second valvifer muscle (M6) on T9 position: ventral region of the cordate apodeme and the inner lateral wall of T9.???
+  hao-ventral_T9-second_valvifer_muscle:id-4deb94 > uberon-attachment_site .ro-located_in hao-T9_0002186 >> pato-position << bspo-ventral_region < hao-cordate_apodeme;
+
+  ##Laterally arising segment of ventral T9-second valvifer muscle (M6) fiber direction: parallel to each other
+  hao-ventral_T9-second_valvifer_muscle:id-4deb94 > bspo-lateral_region:id-2a1084 > obo-skeletal_muscle_fiber:id-834976 >> (pato-parallel_to, pato-multiple); 
+
+  ##First valvifer-second valvifer muscle count: absent
+  this !> hao-first_valvifer-second_valvifer_muscle;
+
+  ##Posterior T9-second valvifer muscle (M7) count: present
+  this > hao-posterior_T9-second_valvifer_muscle:id-a673a5;
+
+  ## Attachment site of posterior T9-second valvifer muscle (M7) on T9 position: on the dorsal region of T9
+  hao-posterior_T9-second_valvifer_muscle:id-a673a5 > bspouberon-attachment_site .ro-located_in hao-T9_0002186 >> pato-position << bspo-dorsal_region < hao-T9_0002186; 
+
+  ##Lateral T9-second valvifer muscle count: present. 
+  this > hao-lateral_T9-second_valvifer_muscle:id-774e35;
+  
+  ##T9-genital membrane muscle (M8) count: present
+  this > hao-T9-genital_membrane_muscle;
+
+  ##Attachment site of lateral T9-second valvifer muscle on T9: separate from attachment site of posterior T9-second valvifer muscle M7
+  hao-lateral_T9-second_valvifer_muscle:id-774e35 > bspouberon-attachment_site .ro-located_in hao-T9_0002186 >> pato-separated_from << bspouberon-attachment_site .ro-located_in hao-T9_0002186 < hao-posterior_T9-second_valvifer_muscle:id-a673a5;
+
+  ##First valvifer-genital membrane muscle (M9) shape: fan shaped in dorsal view
+  this > hao-first_valvifer-genital_membrane_muscle:id-c49744 > bspo-dorsal_region >> pato-fan-shaped;
+
+  ##Attachment site of first valvifer-genital membrane muscle (M9) on first valvifer position: on the medial side of the first valvifer adjacent to the intervalvifer articulation
+  hao-first_valvifer-genital_membrane_muscle:id-c49744 > bspouberon-attachment_site .ro-located_in hao-first_valvifer >> pato-position << bspo-medial_side .ro-adjacent_to hao-intervalvifer_articulation < hao-first_valvifer:id-356f11;
+
+  ##Attachment site of first valvifer-genital membrane muscle (M9) on genital membrane position: NOT CODED
+  hao-first_valvifer-genital_membrane_muscle:id-c49744 > bspouberon-attachment_site .ro-located_in hao-genital_membrane >> ;
+
+  ##Second valvifer-genital membrane muscle (M10) count: absent.
+  this !> hao-second_valvifer-genital_membrane_muscle:id-882d3e;
+
+  ##Attachment site of second valvifer-genital membrane muscle (M10) on second valvifer position: NOT CODED
+  hao-second_valvifer-genital_membrane_muscle:id-882d3e > uberon-attachment_site .ro-located_in hao-second_valvifer >> ;
+
+  ##Anterior second valvifer-second valvula muscles (M11) count: present
+  this > hao-anterior_second_valvifer-second_valvula_muscle;
+
+  ##Attachment site of posterior second valvifer-second valvula muscle (M12) on second valvifer position: on the medial side of the posterior area of the second valvifer.
+  this > hao-posterior_second_valvifer-second_valvula_muscle:id-a7766c > bspouberon-attachment_site .ro-located_in hao-second_valvifer >> pato-position << bspo-medial_side < hao-posterior_area_of_the_second_valvifer;
+
+  ##Attachment site of posterior second valvifer-second valvula muscle (M12) on second valvula: position: on the processus musculares
+  hao-posterior_second_valvifer-second_valvula_muscle:id-a7766c > bspouberon-attachment_site .ro-located_in hao-second_valvula >> pato-position << hao-processus_musculares;
+
+  ##Posterior second valvifer-second valvula muscle (M12) shape in dorsal view: long slender and slightly fan shaped
+  hao-posterior_second_valvifer-second_valvula_muscle:id-a7766c > bspo-dorsal_region >> (pato-slender, pato-fan-shaped, pato-increased_length);
+
+  ##????T9-subanal plate muscle count: present. Not present in HAO
+  this > hao-T9 ?????;
+}
